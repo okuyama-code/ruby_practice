@@ -11,7 +11,7 @@
 #   return new_arr
 # end
 
-# こっちが計算効率がいいコード
+# こっちが計算量の効率がいいコード
 def collect_threes_and_multiples(max_number)
   result = []
   (1..max_number).each do |num|
