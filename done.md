@@ -13,3 +13,6 @@ words = ["apple", "banana", "elephant", "igloo", "umbrella", "octopus", "eagle"]
 
 5. ハッシュの値が偶数のキーのみを抽出し、キーを基準に降順でソートせよ
 hash = { 'a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5, 'f' => 6 }
+
+6. 文字列の配列から、各要素の先頭と末尾の文字を取り出し、新しい文字列を作成せよ
+words = ["hello", "world", "ruby", "programming", ""]
