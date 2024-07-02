@@ -21,3 +21,61 @@ words = ["hello", "world", "ruby", "programming", ""]
 matrix = [[1, 2, 3], [4, 2, 1], [3, 5, 4], [1, 2, 5]]
 
 8. 4文字の文字列を引数に取り、前半2文字と後半2文字が同じ場合は"True"を、それ以外は"False"を返すメソッドを作成してください。
+
+-----------------------------------------------------------------------------------------
+
+9. 文字の文字列を引数に取り、以下のルールに従って結果を返すメソッド analyze_string を作成してください：
+
+返り値の条件：
+
+入力が無効（4文字でない、または英字でない）の場合は "Invalid Input" を返します。
+4文字全てが同じ場合: "-1" を返します。
+3文字が同じで1文字が異なる場合: 異なる文字を返します。
+前半2文字と後半2文字が同じ場合（例：AABB）: "Pair" を返します。
+1文字目と3文字目、2文字目と4文字目がそれぞれ同じ場合（例：ABAB）: "Repeat" を返します。
+それ以外の場合: 最初の文字を返します。
+
+
+処理の流れ：
+
+まず入力の妥当性を確認します。
+次に、入力を小文字に変換します。
+その後、上記の条件に従って適切な結果を返します。
+
+
+テスト：
+
+以下のテストケースで関数の動作を確認してください：
+AAAA, AAAB, ABCD, ABAB, AABB, AAaa, ABC, A1B2
+
+回答の例
+```ruby
+def analyze_string(s)
+  # 入力の検証
+  return "Invalid Input" unless s.is_a?(String) && s.length == 4 && s.match?(/^[a-zA-Z]+$/)
+
+  # 小文字に変換
+  s = s.downcase
+
+  case
+  when s.chars.uniq.length == 1
+    "-1"
+  when s.chars.uniq.length == 2
+    s.chars.find { |char| s.count(char) == 1 }
+  when s[0..1] == s[2..3]
+    "Pair"
+  when s[0] == s[2] && s[1] == s[3]
+    "Repeat"
+  else
+    s[0]
+  end
+end
+
+# テスト
+test_cases = %w[AAAA AAAB ABCD ABAB AABB AAaa ABC A1B2]
+test_cases.each do |case_str|
+  puts "Input: #{case_str}, Result: #{analyze_string(case_str)}"
+end
+```
+
+-----------------------------------
