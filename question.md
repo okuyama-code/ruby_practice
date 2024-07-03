@@ -70,3 +70,205 @@ words = ["eat", "tea", "tan", "ate", "nat", "bat"]
 入力が空文字列の場合は "Empty Input" を返す
 
 
+```ruby
+# 問題1: アナグラムグループ作成
+# 与えられた単語のリストから、アナグラムのグループを作成してください。
+# アナグラムとは、文字を並べ替えて別の単語を作ることができる単語のことです。
+
+# ヒント:
+# - Array#group_by: 配列の要素をブロックの結果でグループ化
+# - String#chars: 文字列を文字の配列に変換
+# - Array#sort: 配列を並べ替え
+# - Array#join: 配列の要素を結合して文字列を作成
+
+words = ["eat", "tea", "tan", "ate", "nat", "bat"]
+
+# 期待される出力:
+# [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
+
+# 問題2: URLパラメータのパース
+# 与えられたURL文字列からクエリパラメータを抽出し、ハッシュに変換してください。
+
+# ヒント:
+# - String#split: 文字列を特定の区切り文字で分割
+# - Array#map: 配列の各要素に対して処理を行い、新しい配列を作成
+# - Hash[]: 2次元配列からハッシュを作成
+# - URI.decode_www_form_component: URLエンコードされた文字列をデコード
+
+url = "https://example.com/search?q=ruby&lang=ja&page=1"
+
+# 期待される出力:
+# {"q"=>"ruby", "lang"=>"ja", "page"=>"1"}
+
+# 問題3: 文章の単語出現頻度カウント
+# 与えられた文章内の各単語の出現頻度をカウントし、出現回数が多い順にソートしてください。
+
+# ヒント:
+# - String#downcase: 文字列を小文字に変換
+# - String#scan: 正規表現にマッチする部分を全て取得
+# - Enumerable#tally: 要素の出現回数をカウント
+# - Hash#sort_by: ハッシュをキーまたは値でソート
+
+text = "Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write."
+
+# 期待される出力:
+# [["a", 3], ["and", 2], ["to", 2], ["is", 2], ["ruby", 1], ...]
+
+# 問題4: 電話番号のフォーマット変換
+# 与えられた電話番号を指定されたフォーマットに変換してください。
+# 入力される電話番号は10桁の数字のみとし、出力は "(XXX) XXX-XXXX" の形式とします。
+
+# ヒント:
+# - String#match: 正規表現でマッチングを行う
+# - String#gsub: 正規表現にマッチする部分を置換
+# - Regexp: 正規表現を作成
+
+phone_numbers = ["1234567890", "9876543210", "5551234567"]
+
+# 期待される出力:
+# ["(123) 456-7890", "(987) 654-3210", "(555) 123-4567"]
+
+# 問題5: JSONデータのフラット化
+# ネストされたハッシュ構造のJSONデータをフラットな構造に変換してください。
+# キーは"."で接続し、値が配列の場合はインデックスを使用してください。
+
+# ヒント:
+# - Hash#each_with_object: ハッシュの各要素に対して処理を行い、新しいオブジェクトを作成
+# - Hash#merge: 2つのハッシュを結合
+# - Array#each_with_index: 配列の各要素とそのインデックスに対して処理を行う
+# - recursive method: 再帰的なメソッドを使用してネストされた構造を処理
+
+json_data = {
+  "name" => "John",
+  "age" => 30,
+  "address" => {
+    "street" => "123 Main St",
+    "city" => "Anytown"
+  },
+  "phones" => ["123-456-7890", "987-654-3210"]
+}
+
+# 期待される出力:
+# {
+#   "name" => "John",
+#   "age" => 30,
+#   "address.street" => "123 Main St",
+#   "address.city" => "Anytown",
+#   "phones.0" => "123-456-7890",
+#   "phones.1" => "987-654-3210"
+# }
+
+# 問題6: CSVデータのパースと集計
+# 与えられたCSV形式の文字列をパースし、各カテゴリの合計金額を計算してください。
+
+# ヒント:
+# - String#split: 文字列を特定の区切り文字で分割
+# - Array#map: 配列の各要素に対して処理を行い、新しい配列を作成
+# - Enumerable#group_by: 要素をグループ化
+# - Enumerable#sum: 数値の合計を計算
+# - CSV.parse: CSVデータをパース（requireが必要）
+
+csv_data = <<-CSV
+Category,Item,Price
+Food,Apple,1.50
+Drink,Coffee,2.00
+Food,Bread,2.50
+Drink,Tea,1.80
+Food,Cheese,3.00
+CSV
+
+# 期待される出力:
+# {"Food"=>7.0, "Drink"=>3.8}
+
+# 問題7: 文字列の圧縮
+# 連続する文字を文字+出現回数で置き換えて、文字列を圧縮してください。
+# 圧縮後の文字列が元の文字列より長くなる場合は、元の文字列を返してください。
+
+# ヒント:
+# - String#chars: 文字列を文字の配列に変換
+# - Enumerable#chunk: 連続する要素をグループ化
+# - Array#map: 配列の各要素に対して処理を行い、新しい配列を作成
+# - Array#join: 配列の要素を結合して文字列を作成
+
+strings = ["aabcccccaaa", "abcdef", "aabaa"]
+
+# 期待される出力:
+# ["a2b1c5a3", "abcdef", "a2b1a2"]
+
+# 問題8: 正規表現を使用した文字列の検証
+# 与えられた文字列が有効なメールアドレスかどうかを判定してください。
+# 簡易的な判定で構いませんが、@と.の存在、およびローカル部とドメイン部の文字種をチェックしてください。
+
+# ヒント:
+# - Regexp#match?: 正規表現にマッチするかどうかを判定
+# - =~: 正規表現にマッチする場合、マッチした位置を返す
+
+emails = ["user@example.com", "invalid.email", "another@user@example.com", "valid_email@domain.co.jp"]
+
+# 期待される出力:
+# [true, false, false, true]
+
+# 問題9: 文字列の回文チェック
+# 与えられた文字列が回文（前から読んでも後ろから読んでも同じ）かどうかを判定してください。
+# ただし、空白と句読点は無視し、大文字小文字も区別しないものとします。
+
+# ヒント:
+# - String#downcase: 文字列を小文字に変換
+# - String#gsub: 正規表現にマッチする部分を置換
+# - String#reverse: 文字列を逆順にする
+
+phrases = ["A man, a plan, a canal: Panama", "race a car", "Was it a car or a cat I saw?"]
+
+# 期待される出力:
+# [true, false, true]
+
+# 問題10: 文字列のマスキング
+# クレジットカード番号を模した文字列の一部をマスクしてください。
+# 最後の4桁以外を'*'で置き換えてください。ただし、区切り文字（スペースまたはハイフン）はそのまま残してください。
+
+# ヒント:
+# - String#gsub: 正規表現にマッチする部分を置換
+# - String#reverse: 文字列を逆順にする
+# - String#scan: 正規表現にマッチする部分を全て取得
+
+credit_cards = ["1234 5678 9012 3456", "9876-5432-1098-7654", "1111222233334444"]
+
+# 期待される出力:
+# ["**** **** **** 3456", "****-****-****-7654", "************4444"]
+
+# 問題11: 文字列のシャッフルと結合
+# 2つの文字列を交互に1文字ずつ結合してください。
+# どちらかの文字列が短い場合は、余った文字をそのまま末尾に追加してください。
+
+# ヒント:
+# - String#chars: 文字列を文字の配列に変換
+# - Array#zip: 2つの配列を要素ごとに組み合わせる
+# - Array#flatten: 多次元配列を1次元配列に平坦化
+# - Array#compact: nilを除去
+# - Array#join: 配列の要素を結合して文字列を作成
+
+string_pairs = [
+  ["abc", "123"],
+  ["hello", "world"],
+  ["ruby", "programming"]
+]
+
+# 期待される出力:
+# ["a1b2c3", "hweolrllod", "rpurobgyrammming"]
+
+# 問題12: 日付のフォーマット変換
+# "YYYY/MM/DD"形式の日付文字列を"DD Month YYYY"形式に変換してください。
+# ただし、Monthは英語の月名（略称）に置き換えてください。
+
+# ヒント:
+# - String#split: 文字列を特定の区切り文字で分割
+# - Array#map: 配列の各要素に対して処理を行い、新しい配列を作成
+# - Array#reverse: 配列を逆順にする
+# - Array#join: 配列の要素を結合して文字列を作成
+# - Hash: 月の数字と略称のマッピングを作成
+
+dates = ["2023/01/15", "2022/12/31", "2024/03/01"]
+
+# 期待される出力:
+# ["15 Jan 2023", "31 Dec 2022", "01 Mar 2024"]
+```
