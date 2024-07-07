@@ -58,20 +58,6 @@ words = ["eat", "tea", "tan", "ate", "nat", "bat"]
 
 ```ruby
 
-# 問題2: URLパラメータのパース
-# 与えられたURL文字列からクエリパラメータを抽出し、ハッシュに変換してください。
-
-# ヒント:
-# - String#split: 文字列を特定の区切り文字で分割
-# - Array#map: 配列の各要素に対して処理を行い、新しい配列を作成
-# - Hash[]: 2次元配列からハッシュを作成
-# - URI.decode_www_form_component: URLエンコードされた文字列をデコード
-
-url = "https://example.com/search?q=ruby&lang=ja&page=1"
-
-# 期待される出力:
-# {"q"=>"ruby", "lang"=>"ja", "page"=>"1"}
-
 # 問題3: 文章の単語出現頻度カウント
 # 与えられた文章内の各単語の出現頻度をカウントし、出現回数が多い順にソートしてください。
 

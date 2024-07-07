@@ -9,8 +9,17 @@
 # 1文字目と3文字目、2文字目と4文字目がそれぞれ同じ場合（例：ABAB）: "Repeat" を返します。
 # それ以外の場合: 最初の文字を返します。
 
+def analyze_string(str)
+  if str.size != 4 || str.match(/[^a-zA-Z]/)
+    return "Invalid Input"
+  end
+end
 
+# string = "abcde"
+string = "A1B2"
 
+p analyze_string(string)
+# p string.match(/[^a-zA-Z]/)
 
 # テスト：
 
