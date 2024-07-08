@@ -31,7 +31,7 @@ class TourCalculator
       .sum(&:total_duration_minutes)
 
     op_days = [(total_duration_minutes.to_f / @tour_rate_unit_minutes).ceil, 1].max
-    ((duration_minutes.to_f / (@tour_rate_unit_minutes * op_days)) * 100).round(3)
+    (duration_minutes.to_f / (@tour_rate_unit_minutes * op_days)).round(3)
   end
 end
 
@@ -55,7 +55,7 @@ calculator = TourCalculator.new(operations, 12 * 60)  # 12時間を分に変換
 result = calculator.tour_actual_operating_ratio
 
 # 結果の表示
-puts "Tour Operating Ratio: #{result}%"
+puts "実車率: #{result}"
 
 # 詳細情報の表示
 total_duration_minutes = operations.sum(&:total_duration_minutes)
