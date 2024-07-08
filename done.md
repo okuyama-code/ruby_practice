@@ -115,3 +115,20 @@ url = "https://example.com/search?q=ruby&lang=ja&page=1"
 
 # 期待される出力:
 # {"q"=>"ruby", "lang"=>"ja", "page"=>"1"}
+
+-------------------------------------------------------------
+
+
+# 問題3: 文章の単語出現頻度カウント
+# 与えられた文章内の各単語の出現頻度をカウントし、出現回数が多い順にソートしてください。
+
+# ヒント:
+# - String#downcase: 文字列を小文字に変換
+# - String#scan: 正規表現にマッチする部分を全て取得
+# - Enumerable#tally: 要素の出現回数をカウント
+# - Hash#sort_by: ハッシュをキーまたは値でソート
+
+text = "Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write."
+
+# 期待される出力:
+# [["a", 3], ["and", 2], ["to", 2], ["is", 2], ["ruby", 1], ...]

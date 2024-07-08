@@ -58,20 +58,6 @@ words = ["eat", "tea", "tan", "ate", "nat", "bat"]
 
 ```ruby
 
-# 問題3: 文章の単語出現頻度カウント
-# 与えられた文章内の各単語の出現頻度をカウントし、出現回数が多い順にソートしてください。
-
-# ヒント:
-# - String#downcase: 文字列を小文字に変換
-# - String#scan: 正規表現にマッチする部分を全て取得
-# - Enumerable#tally: 要素の出現回数をカウント
-# - Hash#sort_by: ハッシュをキーまたは値でソート
-
-text = "Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write."
-
-# 期待される出力:
-# [["a", 3], ["and", 2], ["to", 2], ["is", 2], ["ruby", 1], ...]
-
 # 問題4: 電話番号のフォーマット変換
 # 与えられた電話番号を指定されたフォーマットに変換してください。
 # 入力される電話番号は10桁の数字のみとし、出力は "(XXX) XXX-XXXX" の形式とします。

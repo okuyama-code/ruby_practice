@@ -1,0 +1,514 @@
+{
+  "data": {
+      "currentToken": "28676a15-7aba-4a8a-92a5-eca4ffd63ef5",
+      "tourOperations": [
+          {
+              "tourOperationId": 915,
+              "operationType": "READY",
+              "startLocationArrivalDate": "2023-09-06T04:00:00.000Z",
+              "operationBeginDate": "2023-09-06T04:00:00.000Z",
+              "operationEndDeate": "2023-09-06T04:30:00.000Z",
+              "startLocation": {
+                  "locationId": 1182,
+                  "name": "丸玉埼玉",
+                  "code": "ANAKA_NRT5_001_p",
+                  "address": "埼玉県川越市豊田町3-10-1",
+                  "area": "1",
+                  "longitude": 139.4646675,
+                  "latitude": 35.90081342
+              },
+              "goalLocation": {
+                  "locationId": 1182,
+                  "name": "丸玉埼玉",
+                  "code": "ANAKA_NRT5_001_p",
+                  "address": "埼玉県川越市豊田町3-10-1",
+                  "area": "1",
+                  "longitude": 139.4646675,
+                  "latitude": 35.90081342
+              },
+              "carrierType": {
+                  "carrierTypeId": 1,
+                  "name": "2tPG"
+              }
+          },
+          {
+              "tourOperationId": 916,
+              "operationType": "STAND_BY",
+              "startLocationArrivalDate": "2023-09-06T04:30:00.000Z",
+              "operationBeginDate": "2023-09-06T04:30:00.000Z",
+              "operationEndDeate": "2023-09-06T04:33:06.900Z",
+              "startLocation": {
+                  "locationId": 1182,
+                  "name": "丸玉埼玉",
+                  "code": "ANAKA_NRT5_001_p",
+                  "address": "埼玉県川越市豊田町3-10-1",
+                  "area": "1",
+                  "longitude": 139.4646675,
+                  "latitude": 35.90081342
+              },
+              "goalLocation": {
+                  "locationId": 1182,
+                  "name": "丸玉埼玉",
+                  "code": "ANAKA_NRT5_001_p",
+                  "address": "埼玉県川越市豊田町3-10-1",
+                  "area": "1",
+                  "longitude": 139.4646675,
+                  "latitude": 35.90081342
+              },
+              "carrierType": {
+                  "carrierTypeId": 1,
+                  "name": "2tPG"
+              }
+          },
+          {
+              "tourOperationId": 917,
+              "operationType": "PULL_OUT_PARK",
+              "startLocationArrivalDate": "2023-09-06T04:33:06.900Z",
+              "operationBeginDate": "2023-09-06T04:33:06.900Z",
+              "operationEndDeate": "2023-09-06T04:45:00.000Z",
+              "startLocation": {
+                  "locationId": 1182,
+                  "name": "丸玉埼玉",
+                  "code": "ANAKA_NRT5_001_p",
+                  "address": "埼玉県川越市豊田町3-10-1",
+                  "area": "1",
+                  "longitude": 139.4646675,
+                  "latitude": 35.90081342
+              },
+              "goalLocation": {
+                  "locationId": 38,
+                  "name": "川越FC",
+                  "code": "NRT5",
+                  "address": "埼玉県川越市南台1-10-15",
+                  "area": "1",
+                  "longitude": 139.4466291,
+                  "latitude": 35.88079384
+              },
+              "carrierType": {
+                  "carrierTypeId": 1,
+                  "name": "2tPG"
+              }
+          },
+          {
+              "tourOperationId": 918,
+              "operationType": "LOCAL",
+              "transportOperation": {
+                  "transportOperationId": 1032,
+                  "confirmationStatus": "CONFIRMED",
+                  "versionType": "DRAFT",
+                  "department": {
+                      "departmentId": 2,
+                      "name": "品川"
+                  },
+                  "packageOwner": {
+                      "packageOwnerId": 2,
+                      "name": "Amazon"
+                  },
+                  "packageItem": null,
+                  "startBase": {
+                      "base": {
+                          "baseId": 38,
+                          "name": "川越FC",
+                          "code": "NRT5"
+                      },
+                      "departureDate": "2023-09-06T05:15:00.000Z",
+                      "isDepartureTimeDefined": true,
+                      "arrivalDate": "2023-09-06T04:45:00.000Z",
+                      "isArrivalTimeDefined": true
+                  },
+                  "goalBase": {
+                      "base": {
+                          "baseId": 51,
+                          "name": "川口LDS",
+                          "code": "DEJ1"
+                      },
+                      "arrivalDate": "2023-09-06T06:20:00.000Z",
+                      "isArrivalTimeDefined": true
+                  },
+                  "viaBases": [],
+                  "carrierType": {
+                      "carrierTypeId": 1,
+                      "name": "2tPG"
+                  },
+                  "palletType": "ROLL_BOX",
+                  "palletCount": 16,
+                  "externalOperationId": "112GM59G2",
+                  "transportType": null
+              },
+              "startLocationArrivalDate": "2023-09-06T04:45:00.000Z",
+              "operationBeginDate": "2023-09-06T05:15:00.000Z",
+              "operationEndDeate": "2023-09-06T06:20:00.000Z",
+              "startLocation": {
+                  "locationId": 38,
+                  "name": "川越FC",
+                  "code": "NRT5",
+                  "address": "埼玉県川越市南台1-10-15",
+                  "area": "1",
+                  "longitude": 139.4466291,
+                  "latitude": 35.88079384
+              },
+              "goalLocation": {
+                  "locationId": 51,
+                  "name": "川口LDS",
+                  "code": "DEJ1",
+                  "address": "埼玉県川口市領家4-9",
+                  "area": "1",
+                  "longitude": 139.7473912,
+                  "latitude": 35.78751328
+              },
+              "carrierType": {
+                  "carrierTypeId": 1,
+                  "name": "2tPG"
+              }
+          },
+          {
+              "tourOperationId": 919,
+              "operationType": "REST",
+              "startLocationArrivalDate": "2023-09-06T06:20:00.000Z",
+              "operationBeginDate": "2023-09-06T06:20:00.000Z",
+              "operationEndDeate": "2023-09-06T06:50:00.000Z",
+              "startLocation": {
+                  "locationId": 51,
+                  "name": "川口LDS",
+                  "code": "DEJ1",
+                  "address": "埼玉県川口市領家4-9",
+                  "area": "1",
+                  "longitude": 139.7473912,
+                  "latitude": 35.78751328
+              },
+              "goalLocation": {
+                  "locationId": 51,
+                  "name": "川口LDS",
+                  "code": "DEJ1",
+                  "address": "埼玉県川口市領家4-9",
+                  "area": "1",
+                  "longitude": 139.7473912,
+                  "latitude": 35.78751328
+              },
+              "carrierType": {
+                  "carrierTypeId": 1,
+                  "name": "2tPG"
+              }
+          },
+          {
+              "tourOperationId": 920,
+              "operationType": "NO_BAGGAGE",
+              "startLocationArrivalDate": "2023-09-06T06:50:00.000Z",
+              "operationBeginDate": "2023-09-06T07:15:00.000Z",
+              "operationEndDeate": "2023-09-06T07:40:00.000Z",
+              "startLocation": {
+                  "locationId": 51,
+                  "name": "川口LDS",
+                  "code": "DEJ1",
+                  "address": "埼玉県川口市領家4-9",
+                  "area": "1",
+                  "longitude": 139.7473912,
+                  "latitude": 35.78751328
+              },
+              "goalLocation": {
+                  "locationId": 36,
+                  "name": "市川FC",
+                  "code": "NRT1",
+                  "address": "千葉県市川市塩浜2-13-1",
+                  "area": "1",
+                  "longitude": 139.9265177,
+                  "latitude": 35.66861806
+              },
+              "carrierType": {
+                  "carrierTypeId": 1,
+                  "name": "2tPG"
+              }
+          },
+          {
+              "tourOperationId": 921,
+              "operationType": "LOCAL",
+              "transportOperation": {
+                  "transportOperationId": 1485,
+                  "confirmationStatus": "CONFIRMED",
+                  "versionType": "DRAFT",
+                  "department": {
+                      "departmentId": 2,
+                      "name": "品川"
+                  },
+                  "packageOwner": {
+                      "packageOwnerId": 2,
+                      "name": "Amazon"
+                  },
+                  "packageItem": null,
+                  "startBase": {
+                      "base": {
+                          "baseId": 36,
+                          "name": "市川FC",
+                          "code": "NRT1"
+                      },
+                      "departureDate": "2023-09-06T08:10:00.000Z",
+                      "isDepartureTimeDefined": true,
+                      "arrivalDate": "2023-09-06T07:40:00.000Z",
+                      "isArrivalTimeDefined": true
+                  },
+                  "goalBase": {
+                      "base": {
+                          "baseId": 57,
+                          "name": "船橋LDS",
+                          "code": "DEJ7"
+                      },
+                      "arrivalDate": "2023-09-06T08:55:00.000Z",
+                      "isArrivalTimeDefined": true
+                  },
+                  "viaBases": [],
+                  "carrierType": {
+                      "carrierTypeId": 1,
+                      "name": "2tPG"
+                  },
+                  "palletType": "ROLL_BOX",
+                  "palletCount": 16,
+                  "externalOperationId": "114J6TQ3L",
+                  "transportType": null
+              },
+              "startLocationArrivalDate": "2023-09-06T07:40:00.000Z",
+              "operationBeginDate": "2023-09-06T08:10:00.000Z",
+              "operationEndDeate": "2023-09-06T08:55:00.000Z",
+              "startLocation": {
+                  "locationId": 36,
+                  "name": "市川FC",
+                  "code": "NRT1",
+                  "address": "千葉県市川市塩浜2-13-1",
+                  "area": "1",
+                  "longitude": 139.9265177,
+                  "latitude": 35.66861806
+              },
+              "goalLocation": {
+                  "locationId": 57,
+                  "name": "船橋LDS",
+                  "code": "DEJ7",
+                  "address": "千葉県船橋市浜町2-4-7",
+                  "area": "1",
+                  "longitude": 139.9889057,
+                  "latitude": 35.68082061
+              },
+              "carrierType": {
+                  "carrierTypeId": 1,
+                  "name": "2tPG"
+              }
+          },
+          {
+              "tourOperationId": 922,
+              "operationType": "REST",
+              "startLocationArrivalDate": "2023-09-06T08:55:00.000Z",
+              "operationBeginDate": "2023-09-06T08:55:00.000Z",
+              "operationEndDeate": "2023-09-06T09:10:00.000Z",
+              "startLocation": {
+                  "locationId": 57,
+                  "name": "船橋LDS",
+                  "code": "DEJ7",
+                  "address": "千葉県船橋市浜町2-4-7",
+                  "area": "1",
+                  "longitude": 139.9889057,
+                  "latitude": 35.68082061
+              },
+              "goalLocation": {
+                  "locationId": 57,
+                  "name": "船橋LDS",
+                  "code": "DEJ7",
+                  "address": "千葉県船橋市浜町2-4-7",
+                  "area": "1",
+                  "longitude": 139.9889057,
+                  "latitude": 35.68082061
+              },
+              "carrierType": {
+                  "carrierTypeId": 1,
+                  "name": "2tPG"
+              }
+          },
+          {
+              "tourOperationId": 923,
+              "operationType": "NO_BAGGAGE",
+              "startLocationArrivalDate": "2023-09-06T09:10:00.000Z",
+              "operationBeginDate": "2023-09-06T09:40:00.000Z",
+              "operationEndDeate": "2023-09-06T10:10:00.000Z",
+              "startLocation": {
+                  "locationId": 57,
+                  "name": "船橋LDS",
+                  "code": "DEJ7",
+                  "address": "千葉県船橋市浜町2-4-7",
+                  "area": "1",
+                  "longitude": 139.9889057,
+                  "latitude": 35.68082061
+              },
+              "goalLocation": {
+                  "locationId": 74,
+                  "name": "川口領家SC",
+                  "code": "SCKR",
+                  "address": "埼玉県川口市領家4-9-37",
+                  "area": "1",
+                  "longitude": 139.7474561,
+                  "latitude": 35.78746654
+              },
+              "carrierType": {
+                  "carrierTypeId": 1,
+                  "name": "2tPG"
+              }
+          },
+          {
+              "tourOperationId": 924,
+              "operationType": "LOCAL",
+              "transportOperation": {
+                  "transportOperationId": 1560,
+                  "confirmationStatus": "CONFIRMED",
+                  "versionType": "DRAFT",
+                  "department": {
+                      "departmentId": 2,
+                      "name": "品川"
+                  },
+                  "packageOwner": {
+                      "packageOwnerId": 2,
+                      "name": "Amazon"
+                  },
+                  "packageItem": null,
+                  "startBase": {
+                      "base": {
+                          "baseId": 74,
+                          "name": "川口領家SC",
+                          "code": "SCKR"
+                      },
+                      "departureDate": "2023-09-06T10:40:00.000Z",
+                      "isDepartureTimeDefined": true,
+                      "arrivalDate": "2023-09-06T10:10:00.000Z",
+                      "isArrivalTimeDefined": true
+                  },
+                  "goalBase": {
+                      "base": {
+                          "baseId": 39,
+                          "name": "流山FC",
+                          "code": "QCB1"
+                      },
+                      "arrivalDate": "2023-09-06T12:25:00.000Z",
+                      "isArrivalTimeDefined": true
+                  },
+                  "viaBases": [],
+                  "carrierType": {
+                      "carrierTypeId": 1,
+                      "name": "2tPG"
+                  },
+                  "palletType": "ROLL_BOX",
+                  "palletCount": 16,
+                  "externalOperationId": "1164BT5LP",
+                  "transportType": null
+              },
+              "startLocationArrivalDate": "2023-09-06T10:10:00.000Z",
+              "operationBeginDate": "2023-09-06T10:40:00.000Z",
+              "operationEndDeate": "2023-09-06T12:25:00.000Z",
+              "startLocation": {
+                  "locationId": 74,
+                  "name": "川口領家SC",
+                  "code": "SCKR",
+                  "address": "埼玉県川口市領家4-9-37",
+                  "area": "1",
+                  "longitude": 139.7474561,
+                  "latitude": 35.78746654
+              },
+              "goalLocation": {
+                  "locationId": 39,
+                  "name": "流山FC",
+                  "code": "QCB1",
+                  "address": "千葉県流山市西深井字早稲田1603番地１",
+                  "area": "1",
+                  "longitude": 139.897334,
+                  "latitude": 35.91145385
+              },
+              "carrierType": {
+                  "carrierTypeId": 1,
+                  "name": "2tPG"
+              }
+          },
+          {
+              "tourOperationId": 925,
+              "operationType": "PULL_IN_PARK",
+              "startLocationArrivalDate": "2023-09-06T12:25:00.000Z",
+              "operationBeginDate": "2023-09-06T12:25:00.000Z",
+              "operationEndDeate": "2023-09-06T14:07:41.250Z",
+              "startLocation": {
+                  "locationId": 39,
+                  "name": "流山FC",
+                  "code": "QCB1",
+                  "address": "千葉県流山市西深井字早稲田1603番地１",
+                  "area": "1",
+                  "longitude": 139.897334,
+                  "latitude": 35.91145385
+              },
+              "goalLocation": {
+                  "locationId": 1182,
+                  "name": "丸玉埼玉",
+                  "code": "ANAKA_NRT5_001_p",
+                  "address": "埼玉県川越市豊田町3-10-1",
+                  "area": "1",
+                  "longitude": 139.4646675,
+                  "latitude": 35.90081342
+              },
+              "carrierType": {
+                  "carrierTypeId": 1,
+                  "name": "2tPG"
+              }
+          },
+          {
+              "tourOperationId": 926,
+              "operationType": "STAND_BY",
+              "startLocationArrivalDate": "2023-09-06T14:07:41.250Z",
+              "operationBeginDate": "2023-09-06T14:07:41.250Z",
+              "operationEndDeate": "2023-09-06T15:30:00.000Z",
+              "startLocation": {
+                  "locationId": 1182,
+                  "name": "丸玉埼玉",
+                  "code": "ANAKA_NRT5_001_p",
+                  "address": "埼玉県川越市豊田町3-10-1",
+                  "area": "1",
+                  "longitude": 139.4646675,
+                  "latitude": 35.90081342
+              },
+              "goalLocation": {
+                  "locationId": 1182,
+                  "name": "丸玉埼玉",
+                  "code": "ANAKA_NRT5_001_p",
+                  "address": "埼玉県川越市豊田町3-10-1",
+                  "area": "1",
+                  "longitude": 139.4646675,
+                  "latitude": 35.90081342
+              },
+              "carrierType": {
+                  "carrierTypeId": 1,
+                  "name": "2tPG"
+              }
+          },
+          {
+              "tourOperationId": 927,
+              "operationType": "INSPECTION",
+              "startLocationArrivalDate": "2023-09-06T15:30:00.000Z",
+              "operationBeginDate": "2023-09-06T15:30:00.000Z",
+              "operationEndDeate": "2023-09-06T16:00:00.000Z",
+              "startLocation": {
+                  "locationId": 1182,
+                  "name": "丸玉埼玉",
+                  "code": "ANAKA_NRT5_001_p",
+                  "address": "埼玉県川越市豊田町3-10-1",
+                  "area": "1",
+                  "longitude": 139.4646675,
+                  "latitude": 35.90081342
+              },
+              "goalLocation": {
+                  "locationId": 1182,
+                  "name": "丸玉埼玉",
+                  "code": "ANAKA_NRT5_001_p",
+                  "address": "埼玉県川越市豊田町3-10-1",
+                  "area": "1",
+                  "longitude": 139.4646675,
+                  "latitude": 35.90081342
+              },
+              "carrierType": {
+                  "carrierTypeId": 1,
+                  "name": "2tPG"
+              }
+          }
+      ]
+  },
+  "meta": null
+}
