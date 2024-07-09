@@ -1,6 +1,11 @@
 require 'json'
 require 'date'
 
+# 稼働率の計算
+
+# 現在のjsonに対応した値
+# 実車率: 0.361 稼働率: 0.594
+
 # 運行区分
 # - NONE ()
 # - READY (準備)
@@ -17,8 +22,6 @@ require 'date'
 # - PULL_OUT_PARK_FW (回送(出庫))
 # - PULL_IN_PARK_FW (回送(帰庫))
 # - EMPTY_CAR (空き車両)
-
-# これが稼働率
 
 class Operation
   attr_reader :tour_id, :operation_type, :total_duration_minutes
@@ -67,23 +70,13 @@ class TourCalculator
   def tour_operating_ratios
     return {} if @operations.empty?
 
-    ratios = {}
-    @operations.group_by(&:tour_id).each do |tour_id, tour_operations|
-      total_duration_minutes = tour_operations.sum(&:total_duration_minutes)
-      duration_minutes = tour_operations
-        .reject { |op| EXCLUDED_OPERATION_TYPES.include?(op.operation_type) }
-        .sum(&:total_duration_minutes)
+    total_duration_minutes = @operations.sum(&:total_duration_minutes)
+    duration_minutes = @operations
+      .reject { |op| EXCLUDED_OPERATION_TYPES.include?(op.operation_type) }
+      .sum(&:total_duration_minutes)
 
-      if total_duration_minutes > 0
-        op_days = [((total_duration_minutes.to_f / 60 / 60) / (@tour_rate_unit_minutes / 60)).ceil, 1].max
-        ratios[tour_id] = (duration_minutes.to_f / (@tour_rate_unit_minutes * op_days) * 100).round(3)
-      else
-        puts "Warning: Total duration for tour #{tour_id} is 0 or negative"
-        ratios[tour_id] = 0
-      end
-    end
-
-    ratios
+    op_days = [(total_duration_minutes.to_f / @tour_rate_unit_minutes).ceil, 1].max
+    (duration_minutes.to_f / (@tour_rate_unit_minutes * op_days)).round(3)
   end
 end
 

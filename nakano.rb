@@ -1,7 +1,10 @@
 require 'json'
 require 'date'
 
-#　稼働率の計算　逆ならうまくいく(こっちが実車率の場合)
+#　実車率の計算
+
+# 現在のjsonに対応した値
+# 実車率: 0.361 稼働率: 0.594
 
 # 運行区分
 # - NONE ()
@@ -65,7 +68,7 @@ operations = tour_operations.map do |op|
   Operation.new(
     op['operationType'],
     op['operationBeginDate'],
-    op['operationEndDeate']  # タイポに注意: 'operationEndDeate'
+    op['operationEndDeate']
   )
 end
 
@@ -75,19 +78,3 @@ result = calculator.tour_actual_operating_ratio
 
 # 結果の表示
 puts "実車率: #{result}"
-
-# 詳細情報の表示
-total_duration_minutes = operations.sum(&:total_duration_minutes)
-relevant_duration_minutes = operations
-  .select { |op| TourCalculator::RELEVANT_OPERATION_TYPES.include?(op.operation_type) }
-  .sum(&:total_duration_minutes)
-
-# 運行タイプごとの集計
-operation_type_summary = operations.group_by(&:operation_type).transform_values do |ops|
-  ops.sum(&:total_duration_minutes)
-end
-
-puts "\nOperation Type Summary:"
-operation_type_summary.each do |type, duration|
-  puts "#{type}: #{duration} minutes"
-end
