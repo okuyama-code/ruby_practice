@@ -63,11 +63,6 @@ relevant_duration_minutes = operations
   .select { |op| TourCalculator::RELEVANT_OPERATION_TYPES.include?(op.operation_type) }
   .sum(&:total_duration_minutes)
 
-puts "\nDetailed Information:"
-puts "Total Duration: #{total_duration_minutes} minutes"
-puts "Relevant Duration: #{relevant_duration_minutes} minutes"
-puts "Number of Operations: #{operations.length}"
-
 # 運行タイプごとの集計
 operation_type_summary = operations.group_by(&:operation_type).transform_values do |ops|
   ops.sum(&:total_duration_minutes)
