@@ -1,7 +1,24 @@
 require 'json'
 require 'date'
 
-#　稼働率の計算
+#　稼働率の計算　逆ならうまくいく(こっちが実車率の場合)
+
+# 運行区分
+# - NONE ()
+# - READY (準備)
+# - MAIN_LINE (幹線)
+# - LOCAL (地場)
+# - NO_BAGGAGE (回送)
+# - PULL_OUT_PARK (出庫)
+# - PULL_IN_PARK (帰庫)
+# - REST (休憩)
+# - UNLOADING (荷下ろし)
+# - LONG_REST (休息)
+# - INSPECTION (点検)
+# - STAND_BY (待機)
+# - PULL_OUT_PARK_FW (回送(出庫))
+# - PULL_IN_PARK_FW (回送(帰庫))
+# - EMPTY_CAR (空き車両)
 
 # "READY" 準備, "STAND_BY"　待機, "PULL_OUT_PARK"　出庫,  "LOCAL"　地場, "REST"　休憩, "NO_BAGGAGE"　回送, "LOCAL"　地場, "REST"　休憩, "NO_BAGGAGE"　回送, "LOCAL"　地場, "PULL_IN_PARK"　帰庫, "STAND_BY　待機", "INSPECTION　点検"
 
@@ -14,6 +31,8 @@ class Operation
   end
 end
 
+
+# 実車率
 class TourCalculator
   RELEVANT_OPERATION_TYPES = ['LOCAL', 'MAIN_LINE', 'MIDDLE_LINE', 'REST']
 

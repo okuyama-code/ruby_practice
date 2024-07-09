@@ -1,6 +1,25 @@
 require 'json'
 require 'date'
 
+# 運行区分
+# - NONE ()
+# - READY (準備)
+# - MAIN_LINE (幹線)
+# - LOCAL (地場)
+# - NO_BAGGAGE (回送)
+# - PULL_OUT_PARK (出庫)
+# - PULL_IN_PARK (帰庫)
+# - REST (休憩)
+# - UNLOADING (荷下ろし)
+# - LONG_REST (休息)
+# - INSPECTION (点検)
+# - STAND_BY (待機)
+# - PULL_OUT_PARK_FW (回送(出庫))
+# - PULL_IN_PARK_FW (回送(帰庫))
+# - EMPTY_CAR (空き車両)
+
+# これが稼働率
+
 class Operation
   attr_reader :tour_id, :operation_type, :total_duration_minutes
 
@@ -10,8 +29,35 @@ class Operation
   end
 end
 
+# "READY" 準備, "STAND_BY"　待機, "PULL_OUT_PARK"　出庫,  "LOCAL"　地場, "REST"　休憩, "NO_BAGGAGE"　回送, "LOCAL"　地場, "REST"　休憩, "NO_BAGGAGE"　回送, "LOCAL"　地場, "PULL_IN_PARK"　帰庫, "STAND_BY　待機", "INSPECTION　点検"
+
+
 class TourCalculator
-  EXCLUDED_OPERATION_TYPES = ['INSPECTION', 'READY', 'STAND_BY', 'EMPTY_CAR', 'LONG_REST']
+  EXCLUDED_OPERATION_TYPES =
+  # [点検、準備、待機、空き車両、長い休憩]
+  # EMPTY_CAR?? NO_BAGGAGE
+  ['INSPECTION', 'READY', 'STAND_BY', 'EMPTY_CAR', 'LONG_REST']
+
+  #TODO これ実車率より分子が多くならないか？？ そうなると　実車率 < 稼働率　になる？
+  # 稼働率の該当operationType
+  # NONE （未設定）
+  # LOCAL （地場）
+  # MAIN_LINE （幹線）
+  # REST （休憩）
+  # NO_BAGGAGE （回送）
+  # PULL_OUT_PARK （出庫）
+  # PULL_IN_PARK （帰庫）
+  # UNLOADING （荷下ろし）
+  # PULL_OUT_PARK_FW （回送(出庫)）
+  # PULL_IN_PARK_FW （回送(帰庫)）
+
+  # 実車率
+  # 地場（LOCAL）
+  # 幹線（MAIN_LINE）
+  # 休憩（REST）
+  # 中距離路線（MIDDLE_LINE）
+
+
 
   def initialize(operations, tour_rate_unit_minutes)
     @operations = operations
