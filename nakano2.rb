@@ -98,7 +98,7 @@ tour_operations = json_data['data']['tourOperations']
 operations = tour_operations.map do |op|
   Operation.new(
     op['operationType'],
-    op['operationBeginDate'],
+    op['startLocationArrivalDate'],
     op['operationEndDeate']
   )
 end

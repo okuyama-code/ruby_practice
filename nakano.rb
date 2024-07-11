@@ -53,6 +53,10 @@ class TourCalculator
       .sum(&:total_duration_minutes)
 
     op_days = [(total_duration_minutes.to_f / @tour_rate_unit_minutes).ceil, 1].max
+
+    p duration_minutes.to_f
+    p (@tour_rate_unit_minutes * op_days)
+
     (duration_minutes.to_f / (@tour_rate_unit_minutes * op_days)).round(3)
   end
 end
@@ -67,7 +71,7 @@ tour_operations = json_data['data']['tourOperations']
 operations = tour_operations.map do |op|
   Operation.new(
     op['operationType'],
-    op['operationBeginDate'],
+    op['startLocationArrivalDate'],
     op['operationEndDeate']
   )
 end
