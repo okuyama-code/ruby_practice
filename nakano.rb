@@ -72,7 +72,7 @@ operations = tour_operations.map do |op|
   Operation.new(
     op['operationType'],
     op['startLocationArrivalDate'],
-    op['operationEndDeate']
+    op['operationEndDate']
   )
 end
 
