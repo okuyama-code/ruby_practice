@@ -23,7 +23,23 @@ require 'date'
 # - PULL_IN_PARK_FW (回送(帰庫))
 # - EMPTY_CAR (空き車両)
 
-# "READY" 準備, "STAND_BY"　待機, "PULL_OUT_PARK"　出庫,  "LOCAL"　地場, "REST"　休憩, "NO_BAGGAGE"　回送, "LOCAL"　地場, "REST"　休憩, "NO_BAGGAGE"　回送, "LOCAL"　地場, "PULL_IN_PARK"　帰庫, "STAND_BY　待機", "INSPECTION　点検"
+  # 稼働率の該当operationType
+  # NONE （未設定）
+  # LOCAL （地場）
+  # MAIN_LINE （幹線）
+  # REST （休憩）
+  # NO_BAGGAGE （回送）
+  # PULL_OUT_PARK （出庫）
+  # PULL_IN_PARK （帰庫）
+  # UNLOADING （荷下ろし）
+  # PULL_OUT_PARK_FW （回送(出庫)）
+  # PULL_IN_PARK_FW （回送(帰庫)）
+
+  # 実車率
+  # 地場（LOCAL）
+  # 幹線（MAIN_LINE）
+  # 休憩（REST）
+  # 中距離路線（MIDDLE_LINE）
 
 class Operation
   attr_reader :operation_type, :total_duration_minutes

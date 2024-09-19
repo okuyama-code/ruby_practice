@@ -41,7 +41,6 @@ class TourCalculator
   # EMPTY_CAR?? NO_BAGGAGE
   ['INSPECTION', 'READY', 'STAND_BY', 'EMPTY_CAR', 'LONG_REST']
 
-  #TODO これ実車率より分子が多くならないか？？ そうなると　実車率 < 稼働率　になる？
   # 稼働率の該当operationType
   # NONE （未設定）
   # LOCAL （地場）
